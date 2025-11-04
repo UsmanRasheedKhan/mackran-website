@@ -1,6 +1,4 @@
-import { DefaultSeoProps } from 'next-seo';
-
-export const DEFAULT_SEO: DefaultSeoProps = {
+export const DEFAULT_SEO = {
   title: 'Mackran Real Estate — Luxury Properties UAE',
   description: 'Mackran Real Estate (Mackran Properties) — premium UAE real estate. Discover curated villas, apartments and investment-grade listings across Dubai, Abu Dhabi and the UAE.',
   openGraph: {
@@ -16,4 +14,6 @@ export const DEFAULT_SEO: DefaultSeoProps = {
     site: '@mackran',
     cardType: 'summary_large_image'
   }
-};
+} as const;
+
+export type DefaultSeoConfig = typeof DEFAULT_SEO;
